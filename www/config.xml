@@ -4,14 +4,24 @@
     <description>
         Demonstration of Mixare plugin with PhoneGap
     </description>
-    <author email="support@phonegap.com" href="http://phonegap.com">
-        University of Waikato
+
+    <author email="davidb@cs.waikato.ac.nz" href="http://www.cs.waikato.ac.nz">
+        David Bainbridge, Department of Computer Science, University of Waikato
     </author>
+
+
     <feature name="http://api.phonegap.com/1.0/device" />
+
+    <!-- Customize your app and platform with the preference element. -->
+<!--
     <preference name="permissions" value="none" />
-    <preference name="orientation" value="default" />
-    <preference name="target-device" value="universal" />
-    <preference name="fullscreen" value="true" />
+-->
+
+    <preference name="phonegap-version"           value="3.3.0" />          <!-- all: current version of PhoneGap -->
+    <preference name="orientation"                value="landscape" />      <!-- all: changed from 'default' which means both landscape and portrait -->
+    <preference name="target-device"              value="universal" />      <!-- all: possible values handset, tablet, or universal -->
+    <preference name="fullscreen"                 value="true" />           <!-- all: hides the status bar at the top of the screen -->
+
     <preference name="webviewbounce" value="true" />
     <preference name="prerendered-icon" value="true" />
     <preference name="stay-in-webview" value="false" />
@@ -23,6 +33,17 @@
     <preference name="disable-cursor" value="false" />
     <preference name="android-minSdkVersion" value="7" />
     <preference name="android-installLocation" value="auto" />
+
+    <gap:plugin name="org.apache.cordova.device" />
+    <gap:plugin name="org.apache.cordova.file" />
+<!--
+    <gap:plugin name="org.apache.cordova.geolocation" />
+    <gap:plugin name="org.apache.cordova.media" />
+-->
+    <gap:plugin name="org.apache.cordova.camera" />
+    <gap:plugin name="com.phonegap.plugins.barcodescanner" />
+
+
     <icon src="icon.png" />
     <icon gap:density="ldpi" gap:platform="android" src="res/icon/android/icon-36-ldpi.png" />
     <icon gap:density="mdpi" gap:platform="android" src="res/icon/android/icon-48-mdpi.png" />
